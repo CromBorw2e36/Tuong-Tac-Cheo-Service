@@ -1,0 +1,52 @@
+{
+    "name": "Tương tác chéo",
+    "version": "2.1",
+    "description": "\tTiện ích phát triển dựa trên trang web tuongtaccheo.com mục đích để dễ dàng tiếp cận cho nhiều đối tượng không chuyên về lập trình nhưng muốn tăng tác tác trên các nền tảng mạng xã hội.\n\tChức năng hiện tại tương thích:\n\t-Theo dỗi chéo.\n\t-Like chéo.",
+    "manifest_version": 3,
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [{
+            "matches": [
+                "https://tuongtaccheo.com/kiemtien/subcheo/",
+                "https://tuongtaccheo.com/kiemtien/sharecheo/"
+            ],
+            "css": [
+                "css/style.css"
+            ],
+            "js": [
+                "js/tuongtaccheo/follow.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://tuongtaccheo.com/kiemtien/sharecheo/"
+            ],
+            "css": [
+                "css/style.css"
+            ],
+            "js": [
+                "js/tuongtaccheo/follow.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://*.facebook.com/*",
+                "https://*.facebook.com/profile.php?*"
+            ],
+            "css": [
+                "css/style.css"
+            ],
+            "js": [
+                "js/facebook/follow-addFriend.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "images/icon32.png"
+    },
+    "create_date": "06-2023",
+    "modify_date": "06/26/2023",
+    "author": "CromBorw2e36"
+}
